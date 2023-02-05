@@ -14,8 +14,16 @@
     "noEmit": true,
     "typeRoots": ["node_modules"],
     "allowSyntheticDefaultImports": true,
-    
+    "baseUrl": "/",
+    "paths": {
+      "~/*": ["src/*"]
+    },
+    "types": [
+      "vite/client",
+      "vite-plugin-pages/client"
+    ],
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["dist", "node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

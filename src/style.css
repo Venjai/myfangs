@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-y: scroll;
 }
 
 :root {
@@ -9,6 +10,10 @@ body {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.87);
   background-color: #ccc;
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel Decorative', cursive;
 }
 
 ul {
@@ -22,6 +27,6 @@ a {
 
 .page {
   width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 250px auto;
   color: #000;
 }

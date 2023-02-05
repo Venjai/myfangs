@@ -1,17 +1,17 @@
 <template>
   <div class="header">
     <div class="upper">
-      <div class="logo">Logo</div>
+      <div class="logo">My Fangs</div>
     </div>
     <div class="lower">
       <div class="nav">
         <ul>
-          <a href="#"><li>Vampirzähne</li></a>
-          <a href="#"><li>Über mich</li></a>
-          <a href="#"><li>Referenzen</li></a>
-          <a href="#"><li>Angebot & Kosten</li></a>
-          <a href="#"><li>Gästebuch</li></a>
-          <a href="#"><li>Kontakt</li></a>
+          <router-link to="vampirzaehne"><li>Vampirzähne</li></router-link>
+          <router-link to="ueber-mich"><li>Über mich</li></router-link>
+          <router-link to="referenzen"><li>Referenzen</li></router-link>
+          <router-link to="angebot"><li>Angebot & Kosten</li></router-link>
+          <router-link to="gaestebuch"><li>Gästebuch</li></router-link>
+          <router-link to="kontakt"><li>Kontakt</li></router-link>
         </ul>
       </div>
     </div>
@@ -21,49 +21,51 @@
 <script>
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
   .header {
     width: 100%;
-  }
+      .upper {
+      height: 90px;
+      background: #000;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 0px 20px #000;
+    
+      .logo {
+        font-family: 'Babylonica', cursive;
+        font-size: 64px;
+      }
+    }
+      .lower {
+      background: #242424;
+      .nav {
+      font-family: 'Marcellus SC', serif;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      letter-spacing: 2px;
 
-  .header .upper {
-    height: 80px;
-    background: #000;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 20px #000;
-  }
+        ul {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+          a {
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          width: 200px;
+          line-height: 35px;
 
-  .header .lower {
-    height: 70px;
-    background: #242424;
-  }
-
-  .header .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .header .nav ul {
-    display: flex;
-    font-weight: 600;
-  }
-
-  .header .nav ul a {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    width: 200px;
-    line-height: 35px;
-  }
-
-  
-  .header .nav ul a:hover {
-    background: rgb(113, 21, 11);
+            &:hover {
+              background: rgb(113, 21, 11);
+            }
+          }
+        }
+      }
+    }
   }
 
 </style>

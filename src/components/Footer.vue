@@ -10,48 +10,45 @@
       </div>
       <div class="right">
         <ul>
-          <li><a href="#">Impressum</a></li>
-          <li><a href="#">Datenschutz</a></li>
+          <li><router-link to="/impressum">Impressum</router-link></li>
+          <li><router-link to="/datenschutz">Datenschutz</router-link></li>
         </ul>
       </div>
     </div>
     <div class="lower">
-      Copyright 2023
+      Copyright 2023 | myfangs
     </div>
   </div>  
 </template>
 
-<script>
+<script lang="ts">
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
   .footer {
     width: 100%;
     display: block;
-    position: absolute;
+    position: fixed;
     bottom: 0;
-  }
-
-  .footer a:hover {
+    a:hover {
     color: darkred;
-  }
-
-  .footer .upper {
-    background: #242424;
-    height: 200px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .footer .lower {
+    }
+    .upper {
+      background: #242424;
+      height: 150px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .lower {
     background: #000;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 0px 20px #000;
+    }
   }
 
 </style>
